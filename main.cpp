@@ -115,6 +115,10 @@ int main(int argc, char** argv) {
     for(map<int, int>::iterator it = pred.begin(); it != pred.end(); it++){
         cout << IntToLetter((*it).first) << ":" << IntToLetter((*it).second) << endl;
     }
+    
+    cout << "Appuyer sur n'importe quelle touche pour terminer" << endl;
+    cin.get();
+    cin.get();
     return 0;
 }
 
