@@ -20,7 +20,7 @@ Matrice::Matrice(int taille) {
         this->mat_tab[i] = new int[taille];
     }
     
-    /*mat_tab[0][0] = 0;
+    mat_tab[0][0] = 0;
     mat_tab[0][1] = 7;
     mat_tab[0][2] = 1;
     mat_tab[0][3] = 100;
@@ -60,16 +60,16 @@ Matrice::Matrice(int taille) {
     mat_tab[5][2] = 100;
     mat_tab[5][3] = 100;
     mat_tab[5][4] = 3;
-    mat_tab[5][5] = 0;*/
+    mat_tab[5][5] = 0;
     
-    for(int i=0; i<taille; i++){
+    /*for(int i=0; i<taille; i++){
         for(int j=0; j<taille; j++){
             cout << "Rentrez la valeur en " << i << " - " << j << endl;
             int valeur;
             cin >> valeur;
             this->mat_tab[i][j] = valeur;
         }
-    }
+    }*/
     
     cout << "Fin" << endl;
 }

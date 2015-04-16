@@ -20,6 +20,7 @@ int main(int argc, char** argv) {
 
     int nbre_lettre = 0;
     int depart = 1;
+    int ligne = 1;
     
     cout << "Rentrez la taille de la matrice" << endl;
     cin >> nbre_lettre;
@@ -96,6 +97,29 @@ int main(int argc, char** argv) {
             }
         }
         fait.push_back(min_point);
+        cout << "Ligne " << ligne << endl;
+        ligne++;
+        cout << "Fait : ";
+        for(int i=0; i < fait.size(); i++){
+            cout << IntToLetter(fait[i]) << ", ";
+        }
+        cout << endl;
+        
+        cout << "Distances";
+        for(map<int, int>::iterator it = dist.begin(); it != dist.end(); it++){
+            cout << " | " << IntToLetter((*it).first) << " | ";
+        }
+        cout << endl;
+        cout << "Distances";
+        for(map<int, int>::iterator it = dist.begin(); it != dist.end(); it++){
+            cout << " | " << (*it).second << " | ";
+        }
+        cout << endl;
+        cout << "Predecess";
+        for(map<int, int>::iterator it = pred.begin(); it != pred.end(); it++){
+            cout << " | " << IntToLetter((*it).second) << " | ";
+        }
+        cout << endl << endl;
     }
     
     /*for(map<int, int>::iterator it = dist.begin(); it != dist.end(); it++){
@@ -105,7 +129,7 @@ int main(int argc, char** argv) {
     cout << endl;
     for(map<int, int>::iterator it = pred.begin(); it != pred.end(); it++){
         cout << (*it).first << ":" << (*it).second << endl;
-    }*/
+    }
     
     for(map<int, int>::iterator it = dist.begin(); it != dist.end(); it++){
         cout << IntToLetter((*it).first) << ":" << (*it).second << endl;
@@ -114,9 +138,9 @@ int main(int argc, char** argv) {
     cout << endl;
     for(map<int, int>::iterator it = pred.begin(); it != pred.end(); it++){
         cout << IntToLetter((*it).first) << ":" << IntToLetter((*it).second) << endl;
-    }
+    }*/
     
-    cout << "Appuyer sur n'importe quelle touche pour terminer" << endl;
+    cout << "Appuyer sur Entree pour terminer" << endl;
     cin.get();
     cin.get();
     return 0;
